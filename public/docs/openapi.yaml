@@ -1,0 +1,174 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/role/get:
+    get:
+      summary: 'Get all roles'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Api for roles'
+      security: []
+  /api/login:
+    post:
+      summary: 'Login User'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Api for users'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 40 characters.'
+                  example: iqzc
+                password:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: ps
+              required:
+                - email
+                - password
+      security: []
+  /api/user/create:
+    post:
+      summary: 'Create User'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Api for users'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the user. Must not be greater than 255 characters.'
+                  example: fzwmlqejhynoxxktalvzwvge
+                email:
+                  type: string
+                  description: 'The email of the user. Must be a valid email address. Must not be greater than 40 characters.'
+                  example: mmjivmudkfvkbcmkbamupqooxpfencuop
+                role_id:
+                  type: integer
+                  description: 'The role id of the user.'
+                  example: 3
+              required:
+                - name
+                - email
+                - role_id
+      security: []
+  /api/user/update-own:
+    post:
+      summary: 'Update Own password'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Api for users'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: ut
+              required:
+                - password
+      security: []
+tags:
+  -
+    name: 'Api for roles'
+    description: ''
+  -
+    name: 'Api for users'
+    description: ''
