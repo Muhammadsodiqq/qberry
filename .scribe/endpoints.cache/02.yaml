@@ -22,14 +22,14 @@ endpoints:
         name: country_name
         description: 'Country name. Must not be greater than 255 characters.'
         required: true
-        example: rkfzqassxxgggbafheuydoowxvdpmkwsqauylnxyofqziyrnhgqtutyakgrfqjlwgbccajuonyeanczbkydkxikksqwcjjotyihrlmxvzjoinotnqrcnnwacbpvvozdvfrjztlqvltdxtvxsuoqqsdkwaozkifnhiqvaucgscsifzolkgpjeuvsebsaqgbudpjtqhdneuxxy
+        example: zwypbawlwzhlikagievcjmqdegmdmfygqhyfiauekmtkfcpnuupvenmtvttldssyxlnjwvuowpgtqdobwloeqagqtdsqroyncemkunvkhhphqdebkdlilitzvtlnccypcjdspetwyxlhliwdpxduyficvcyhpunalvjdqtesq
         type: string
         custom: []
       city_name:
         name: city_name
         description: 'City name. Must not be greater than 255 characters.'
         required: true
-        example: jwumzkchkspszhgrbqxxotwdakfvvpeqqqnhmmlyoasobplihfqklavareuvarcvleusihvbmxwhycmtbzjnoqlimpgyamntnfwfytfwktnmgzudfsnrjojtmztwzsnmrczmrftvenmweigkocwuowunvmmhiaxidfyvaerlpiamcyjueznnhzwkrcaseur
+        example: fujcpufsygyvcgfitjqpmqancckwzjlunxcsqraavqfezxpfhwispgydmhghnmuupzvxixqvrionxmvhkixaekywxopjbsdplzoutkjquuqbautijwfrilytjorbhwyqinrtqxkmniwjlictdjwfeqzoodxhbbcisoajzedqrkvkrmcsyqniwcrnzhtcwykj
         type: string
         custom: []
     responses: []

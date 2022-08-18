@@ -22,7 +22,7 @@ class RoomController extends Controller
             "name" => $request->name,
         ]);
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);
@@ -34,7 +34,7 @@ class RoomController extends Controller
     public function getAll(Pagination $request){
         $data = Room::paginate($request->count ?? 10);
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);

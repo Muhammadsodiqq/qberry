@@ -34,7 +34,7 @@ Route::group(['middleware' => ['auth:api']], function () {
 
         Route::prefix('block')->controller(BlockController::class)->group(function () {
             Route::post('create', 'create')->middleware(AdminMiddleware::class);
-            Route::get('getByRoomId/{room_id}', 'getByRoomID');
+            Route::get('get-by-room-id/{room_id}', 'getByRoomID');
         });
 
         Route::prefix('role')->controller(RoleController::class)->group(function () {
@@ -59,6 +59,8 @@ Route::group(['middleware' => ['auth:api']], function () {
         Route::prefix('user-flow')->controller(UserFlowController::class)->group(function () {
             Route::get('get', 'getLocationsWithRooms');
             Route::post("calculate/{location_id}", "Calculate");
+            Route::post("booking", "Booking");
+            Route::get("get-own-bookings", "getOwnBookings");
         });
 
 });

@@ -23,10 +23,9 @@ class BlockController extends Controller
             "height" => $request->height,
             "length" => $request->length,
             "room_id" => $request->room_id,
-            'is_blocked' => $request->is_blocked,
         ]);
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);
@@ -39,7 +38,7 @@ class BlockController extends Controller
     {
         $data = Block::where('room_id', $room_id)->get();
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);

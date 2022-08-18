@@ -20,42 +20,42 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy
+        example: psgdkmadlukhwtuhdhcvnfyixkzblgvgizofmvqhshrdezddiawaqavrmvtdumynsngqfguppnkmloehsjkofdnrktgmgqyrohfkhutkzawilymcplcwgrhgvnhrwdfeenflzfjqslzbyznjapffky
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: 1.75056
+        example: 371.1254555
         type: number
         custom: []
       width:
         name: width
         description: ''
         required: true
-        example: 685951405.71889
+        example: 176253.2367858
         type: number
         custom: []
       height:
         name: height
         description: ''
         required: true
-        example: 4895.5229046
+        example: 7781723.5
         type: number
         custom: []
       length:
         name: length
         description: ''
         required: true
-        example: 900427.75593
+        example: 25.578
         type: number
         custom: []
       room_id:
         name: room_id
         description: ''
         required: true
-        example: 8
+        example: 5
         type: integer
         custom: []
     responses: []
@@ -63,7 +63,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/block/getByRoomId/{room_id}'
+    uri: 'api/block/get-by-room-id/{room_id}'
     metadata:
       title: 'Get  blocks by room_id'
       description: ''
@@ -77,7 +77,7 @@ endpoints:
         name: room_id
         description: 'The ID of the room.'
         required: true
-        example: et
+        example: consequuntur
         type: string
         custom: []
     queryParameters: []

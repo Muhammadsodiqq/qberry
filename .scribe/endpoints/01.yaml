@@ -20,14 +20,14 @@ endpoints:
         name: name
         description: 'Name of the fridge. Must not be greater than 255 characters.'
         required: true
-        example: rxamlo
+        example: qucacksmtyysfouruvyhogyfujuihcdbjgivtcgjfsnar
         type: string
         custom: []
       block_id:
         name: block_id
         description: 'Block id of the fridge.'
         required: true
-        example: 2
+        example: 13
         type: integer
         custom: []
     responses: []

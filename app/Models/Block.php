@@ -18,4 +18,14 @@ class Block extends Model
         'room_id',
         "user_id",
     ];
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
+
+    // public function getCurrentCostAttribute()
+    // {
+
+    // }
 }

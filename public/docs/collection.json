@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "1fc50e54-dff2-4da8-9cfb-3b3926db37c0",
+        "_postman_id": "98cafd33-139a-4470-97f9-fc9b52665d56",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy\",\"price\":1.75056,\"width\":685951405.7188922,\"height\":4895.5229046,\"length\":900427.75593,\"room_id\":8}"
+                            "raw": "{\"name\":\"psgdkmadlukhwtuhdhcvnfyixkzblgvgizofmvqhshrdezddiawaqavrmvtdumynsngqfguppnkmloehsjkofdnrktgmgqyrohfkhutkzawilymcplcwgrhgvnhrwdfeenflzfjqslzbyznjapffky\",\"price\":371.1254555,\"width\":176253.2367858,\"height\":7781723.5,\"length\":25.578,\"room_id\":5}"
                         },
                         "description": "",
                         "auth": {
@@ -55,14 +55,14 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/block\/getByRoomId\/:room_id",
+                            "path": "api\/block\/get-by-room-id\/:room_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/block\/getByRoomId\/:room_id",
+                            "raw": "{{baseUrl}}\/api\/block\/get-by-room-id\/:room_id",
                             "variable": [
                                 {
                                     "id": "room_id",
                                     "key": "room_id",
-                                    "value": "et",
+                                    "value": "consequuntur",
                                     "description": "The ID of the room."
                                 }
                             ]
@@ -134,7 +134,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"rxamlo\",\"block_id\":2}"
+                            "raw": "{\"name\":\"qucacksmtyysfouruvyhogyfujuihcdbjgivtcgjfsnar\",\"block_id\":13}"
                         },
                         "description": "",
                         "auth": {
@@ -219,7 +219,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"country_name\":\"rkfzqassxxgggbafheuydoowxvdpmkwsqauylnxyofqziyrnhgqtutyakgrfqjlwgbccajuonyeanczbkydkxikksqwcjjotyihrlmxvzjoinotnqrcnnwacbpvvozdvfrjztlqvltdxtvxsuoqqsdkwaozkifnhiqvaucgscsifzolkgpjeuvsebsaqgbudpjtqhdneuxxy\",\"city_name\":\"jwumzkchkspszhgrbqxxotwdakfvvpeqqqnhmmlyoasobplihfqklavareuvarcvleusihvbmxwhycmtbzjnoqlimpgyamntnfwfytfwktnmgzudfsnrjojtmztwzsnmrczmrftvenmweigkocwuowunvmmhiaxidfyvaerlpiamcyjueznnhzwkrcaseur\"}"
+                            "raw": "{\"country_name\":\"zwypbawlwzhlikagievcjmqdegmdmfygqhyfiauekmtkfcpnuupvenmtvttldssyxlnjwvuowpgtqdobwloeqagqtdsqroyncemkunvkhhphqdebkdlilitzvtlnccypcjdspetwyxlhliwdpxduyficvcyhpunalvjdqtesq\",\"city_name\":\"fujcpufsygyvcgfitjqpmqancckwzjlunxcsqraavqfezxpfhwispgydmhghnmuupzvxixqvrionxmvhkixaekywxopjbsdplzoutkjquuqbautijwfrilytjorbhwyqinrtqxkmniwjlictdjwfeqzoodxhbbcisoajzedqrkvkrmcsyqniwcrnzhtcwykj\"}"
                         },
                         "description": "",
                         "auth": {
@@ -358,7 +358,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"temperature\":\"3\",\"location_id\":1,\"name\":\"dqhbtdqfxqpweqfoohgjyrvsbrigufreemgmuillqnbdkhxajlabiprjvqkoehayhsfborrfazuyoibhuvdsmynvoyxzrnrwjppzxntchjqsksgcqkamgzefjljxaknqmcruznwmraripwvomxqhcmzhglzhslsjyu\"}"
+                            "raw": "{\"temperature\":\"1\",\"location_id\":12,\"name\":\"xkjtzouzydaxldrherhvtpxdqfkjwgcfclkjwwfklhwlbtcdjvtrtslvnftsvxhmyfbmlf\"}"
                         },
                         "description": "",
                         "auth": {
@@ -389,7 +389,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"count\":13,\"page\":20}"
+                            "raw": "{\"count\":3,\"page\":5}"
                         },
                         "description": "",
                         "auth": {
@@ -446,7 +446,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"praervtuineqrtaberykbeinfuklnixt\",\"password\":\"\"}"
+                            "raw": "{\"email\":\"glrhyfo\",\"password\":\"mb\"}"
                         },
                         "description": "",
                         "auth": {
@@ -477,7 +477,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fxanylxqvnsxfctkhiwnwcgqqlqmqaaujcsrdknkzfkslfccycgjlkiefqijvyarvjsnjyxuwjfgfsdqnoklvwervclumkbtcfdhrcypbsivphwnaeplzxnvexxadxopcadmpeemganwibvfeodwdtwhacnhcboowpxqlkygbaefqqimijoncvymbdiuhkvmntscgcdvmhvrpwkzfqykwvsctojyovpvkvnjxgggsemjnh\",\"email\":\"swqdomhlmlkjbuogovbdqflxdlxjpxdykdio\",\"role_id\":19}"
+                            "raw": "{\"name\":\"vawcvzknciuejtbjwhxsxyucardaskbujoqhnphzqvteeeknfcmgjvnmxjjjrqdphbqeitqhwcctxqwodrfbgqcliwynrqzslkcgjjgt\",\"email\":\"dknmixkklfigzacpsvupsniuxvichzdjuyjsqis\",\"role_id\":19}"
                         },
                         "description": "",
                         "auth": {
@@ -508,7 +508,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"aut\"}"
+                            "raw": "{\"password\":\"est\"}"
                         },
                         "description": "",
                         "auth": {
@@ -545,7 +545,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"count\":2,\"page\":17}"
+                            "raw": "{\"count\":1,\"page\":16}"
                         },
                         "description": "",
                         "auth": {
@@ -586,7 +586,7 @@
                                 {
                                     "id": "location_id",
                                     "key": "location_id",
-                                    "value": "architecto",
+                                    "value": "et",
                                     "description": "The ID of the location."
                                 }
                             ]
@@ -604,7 +604,38 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"width\":0,\"height\":0,\"length\":0}"
+                            "raw": "{\"width\":1,\"height\":0,\"length\":1}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/user-flow\/booking",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-flow\/booking",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-flow\/booking"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"id\":[4]}"
                         },
                         "description": "",
                         "auth": {

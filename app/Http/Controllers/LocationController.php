@@ -22,7 +22,7 @@ class LocationController extends Controller
             "city_name" => $request->city_name,
         ]);
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);
@@ -35,7 +35,7 @@ class LocationController extends Controller
     {
         $data = Location::get();
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);

@@ -30,7 +30,7 @@ class UserController extends Controller
             "code" => $randStr,
         ]);
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);
@@ -43,7 +43,7 @@ class UserController extends Controller
     {
 
         if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return response()->json(
+            return response_success(
                 [
                     "ok" => false,
                     'error' => 'Unauthorised.'
@@ -55,7 +55,7 @@ class UserController extends Controller
         $user = User::where('email', $request->email)->first();
         $token = $user->createToken('Qberry')->accessToken;
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => [
                 "type" => "Bearer",
@@ -73,7 +73,7 @@ class UserController extends Controller
         $user->update([
             "password" => bcrypt($request->password),
         ]);
-        return response()->json([
+        return response_success([
             "ok" => true,
             "msg" => 'User updated successfully.',
         ]);

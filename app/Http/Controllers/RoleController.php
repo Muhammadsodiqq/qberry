@@ -16,7 +16,7 @@ class RoleController extends Controller
     public function get()
     {
         $roles = Role::all();
-        return response()->json([
+        return response_success([
             'roles' => $roles,
         ]);
     }

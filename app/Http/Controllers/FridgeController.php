@@ -21,7 +21,7 @@ class FridgeController extends Controller
             "block_id" => $request->block_id,
         ]);
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);
@@ -34,7 +34,7 @@ class FridgeController extends Controller
     {
         $data = Fridge::where('block_id', $block_id)->get();
 
-        return response()->json([
+        return response_success([
             "ok" => true,
             "data" => $data,
         ]);
