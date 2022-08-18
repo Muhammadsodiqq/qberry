@@ -10,11 +10,274 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "eb25b950-38ef-4cdc-9918-48668fd8abed",
+        "_postman_id": "1fc50e54-dff2-4da8-9cfb-3b3926db37c0",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Api for blocks",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create Block",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/block\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/block\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy\",\"price\":1.75056,\"width\":685951405.7188922,\"height\":4895.5229046,\"length\":900427.75593,\"room_id\":8}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get  blocks by room_id",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/block\/getByRoomId\/:room_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/block\/getByRoomId\/:room_id",
+                            "variable": [
+                                {
+                                    "id": "room_id",
+                                    "key": "room_id",
+                                    "value": "et",
+                                    "description": "The ID of the room."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Api for fridges",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create Fridge",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/fridge\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/fridge\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"rxamlo\",\"block_id\":2}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get  fridges by block_id",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/fridge\/getByBlockId",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/fridge\/getByBlockId"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Api for locations",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create Location",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/location\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/location\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"country_name\":\"rkfzqassxxgggbafheuydoowxvdpmkwsqauylnxyofqziyrnhgqtutyakgrfqjlwgbccajuonyeanczbkydkxikksqwcjjotyihrlmxvzjoinotnqrcnnwacbpvvozdvfrjztlqvltdxtvxsuoqqsdkwaozkifnhiqvaucgscsifzolkgpjeuvsebsaqgbudpjtqhdneuxxy\",\"city_name\":\"jwumzkchkspszhgrbqxxotwdakfvvpeqqqnhmmlyoasobplihfqklavareuvarcvleusihvbmxwhycmtbzjnoqlimpgyamntnfwfytfwktnmgzudfsnrjojtmztwzsnmrczmrftvenmweigkocwuowunvmmhiaxidfyvaerlpiamcyjueznnhzwkrcaseur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get all locations",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/location\/get",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/location\/get"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "Api for roles",
             "description": "",
@@ -70,6 +333,94 @@
             ]
         },
         {
+            "name": "Api for rooms",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create Room",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/room\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/room\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"temperature\":\"3\",\"location_id\":1,\"name\":\"dqhbtdqfxqpweqfoohgjyrvsbrigufreemgmuillqnbdkhxajlabiprjvqkoehayhsfborrfazuyoibhuvdsmynvoyxzrnrwjppzxntchjqsksgcqkamgzefjljxaknqmcruznwmraripwvomxqhcmzhglzhslsjyu\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get all rooms",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/room\/get",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/room\/get"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"count\":13,\"page\":20}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Api for users",
             "description": "",
             "item": [
@@ -95,7 +446,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"iqzc\",\"password\":\"ps\"}"
+                            "raw": "{\"email\":\"praervtuineqrtaberykbeinfuklnixt\",\"password\":\"\"}"
                         },
                         "description": "",
                         "auth": {
@@ -126,7 +477,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fzwmlqejhynoxxktalvzwvge\",\"email\":\"mmjivmudkfvkbcmkbamupqooxpfencuop\",\"role_id\":3}"
+                            "raw": "{\"name\":\"fxanylxqvnsxfctkhiwnwcgqqlqmqaaujcsrdknkzfkslfccycgjlkiefqijvyarvjsnjyxuwjfgfsdqnoklvwervclumkbtcfdhrcypbsivphwnaeplzxnvexxadxopcadmpeemganwibvfeodwdtwhacnhcboowpxqlkygbaefqqimijoncvymbdiuhkvmntscgcdvmhvrpwkzfqykwvsctojyovpvkvnjxgggsemjnh\",\"email\":\"swqdomhlmlkjbuogovbdqflxdlxjpxdykdio\",\"role_id\":19}"
                         },
                         "description": "",
                         "auth": {
@@ -157,7 +508,103 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"ut\"}"
+                            "raw": "{\"password\":\"aut\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/user-flow\/get",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-flow\/get",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-flow\/get"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"count\":2,\"page\":17}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/user-flow\/calculate\/{location_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-flow\/calculate\/:location_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-flow\/calculate\/:location_id",
+                            "variable": [
+                                {
+                                    "id": "location_id",
+                                    "key": "location_id",
+                                    "value": "architecto",
+                                    "description": "The ID of the location."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"width\":0,\"height\":0,\"length\":0}"
                         },
                         "description": "",
                         "auth": {

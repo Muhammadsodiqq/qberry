@@ -1,0 +1,87 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/user-flow/get
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      count:
+        name: count
+        description: 'Count of items per page . Default is 10.'
+        required: false
+        example: 2
+        type: integer
+        custom: []
+      page:
+        name: page
+        description: 'Page number . Default is 1.'
+        required: false
+        example: 17
+        type: integer
+        custom: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/user-flow/calculate/{location_id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      location_id:
+        name: location_id
+        description: 'The ID of the location.'
+        required: true
+        example: architecto
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      width:
+        name: width
+        description: 'Must be at least 1.'
+        required: true
+        example: 0
+        type: number
+        custom: []
+      height:
+        name: height
+        description: 'Must be at least 1.'
+        required: true
+        example: 0
+        type: number
+        custom: []
+      length:
+        name: length
+        description: 'Must be at least 2.'
+        required: true
+        example: 0
+        type: number
+        custom: []
+    responses: []
+    responseFields: []

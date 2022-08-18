@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Block extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'price',
+        'width',
+        'height',
+        'length',
+        'room_id',
+        "user_id",
+    ];
 }

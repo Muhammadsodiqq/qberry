@@ -7,6 +7,263 @@ servers:
   -
     url: 'http://localhost'
 paths:
+  /api/block/create:
+    post:
+      summary: 'Create Block'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Api for blocks'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy
+                price:
+                  type: number
+                  description: ''
+                  example: 1.75056
+                width:
+                  type: number
+                  description: ''
+                  example: 685951405.71889
+                height:
+                  type: number
+                  description: ''
+                  example: 4895.5229046
+                length:
+                  type: number
+                  description: ''
+                  example: 900427.75593
+                room_id:
+                  type: integer
+                  description: ''
+                  example: 8
+              required:
+                - name
+                - price
+                - width
+                - height
+                - length
+                - room_id
+      security: []
+  '/api/block/getByRoomId/{room_id}':
+    get:
+      summary: 'Get  blocks by room_id'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Api for blocks'
+      security: []
+    parameters:
+      -
+        in: path
+        name: room_id
+        description: 'The ID of the room.'
+        example: et
+        required: true
+        schema:
+          type: string
+  /api/fridge/create:
+    post:
+      summary: 'Create Fridge'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Api for fridges'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Name of the fridge. Must not be greater than 255 characters.'
+                  example: rxamlo
+                block_id:
+                  type: integer
+                  description: 'Block id of the fridge.'
+                  example: 2
+              required:
+                - name
+                - block_id
+      security: []
+  /api/fridge/getByBlockId:
+    get:
+      summary: 'Get  fridges by block_id'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Api for fridges'
+      security: []
+  /api/location/create:
+    post:
+      summary: 'Create Location'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Api for locations'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                country_name:
+                  type: string
+                  description: 'Country name. Must not be greater than 255 characters.'
+                  example: rkfzqassxxgggbafheuydoowxvdpmkwsqauylnxyofqziyrnhgqtutyakgrfqjlwgbccajuonyeanczbkydkxikksqwcjjotyihrlmxvzjoinotnqrcnnwacbpvvozdvfrjztlqvltdxtvxsuoqqsdkwaozkifnhiqvaucgscsifzolkgpjeuvsebsaqgbudpjtqhdneuxxy
+                city_name:
+                  type: string
+                  description: 'City name. Must not be greater than 255 characters.'
+                  example: jwumzkchkspszhgrbqxxotwdakfvvpeqqqnhmmlyoasobplihfqklavareuvarcvleusihvbmxwhycmtbzjnoqlimpgyamntnfwfytfwktnmgzudfsnrjojtmztwzsnmrczmrftvenmweigkocwuowunvmmhiaxidfyvaerlpiamcyjueznnhzwkrcaseur
+              required:
+                - country_name
+                - city_name
+      security: []
+  /api/location/get:
+    get:
+      summary: 'Get all locations'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Api for locations'
+      security: []
   /api/role/get:
     get:
       summary: 'Get all roles'
@@ -42,6 +299,102 @@ paths:
       tags:
         - 'Api for roles'
       security: []
+  /api/room/create:
+    post:
+      summary: 'Create Room'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Api for rooms'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                temperature:
+                  type: number
+                  description: 'Temperature of the room. Must be one of <code>4</code>, <code>3</code>, <code>2</code>, <code>1</code>, or <code>0</code>.'
+                  example: '3'
+                location_id:
+                  type: integer
+                  description: 'Location id of the room.'
+                  example: 1
+                name:
+                  type: string
+                  description: 'Name of the room. Must not be greater than 255 characters.'
+                  example: dqhbtdqfxqpweqfoohgjyrvsbrigufreemgmuillqnbdkhxajlabiprjvqkoehayhsfborrfazuyoibhuvdsmynvoyxzrnrwjppzxntchjqsksgcqkamgzefjljxaknqmcruznwmraripwvomxqhcmzhglzhslsjyu
+              required:
+                - temperature
+                - location_id
+                - name
+      security: []
+  /api/room/get:
+    get:
+      summary: 'Get all rooms'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Api for rooms'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                count:
+                  type: integer
+                  description: 'Count of items per page . Default is 10.'
+                  example: 13
+                page:
+                  type: integer
+                  description: 'Page number . Default is 1.'
+                  example: 20
+      security: []
   /api/login:
     post:
       summary: 'Login User'
@@ -74,11 +427,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 40 characters.'
-                  example: iqzc
+                  example: praervtuineqrtaberykbeinfuklnixt
                 password:
                   type: string
                   description: 'Must be at least 4 characters.'
-                  example: ps
+                  example: ''
               required:
                 - email
                 - password
@@ -115,15 +468,15 @@ paths:
                 name:
                   type: string
                   description: 'The name of the user. Must not be greater than 255 characters.'
-                  example: fzwmlqejhynoxxktalvzwvge
+                  example: fxanylxqvnsxfctkhiwnwcgqqlqmqaaujcsrdknkzfkslfccycgjlkiefqijvyarvjsnjyxuwjfgfsdqnoklvwervclumkbtcfdhrcypbsivphwnaeplzxnvexxadxopcadmpeemganwibvfeodwdtwhacnhcboowpxqlkygbaefqqimijoncvymbdiuhkvmntscgcdvmhvrpwkzfqykwvsctojyovpvkvnjxgggsemjnh
                 email:
                   type: string
                   description: 'The email of the user. Must be a valid email address. Must not be greater than 40 characters.'
-                  example: mmjivmudkfvkbcmkbamupqooxpfencuop
+                  example: swqdomhlmlkjbuogovbdqflxdlxjpxdykdio
                 role_id:
                   type: integer
                   description: 'The role id of the user.'
-                  example: 3
+                  example: 19
               required:
                 - name
                 - email
@@ -161,14 +514,134 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: ut
+                  example: aut
               required:
                 - password
       security: []
+  /api/user-flow/get:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                count:
+                  type: integer
+                  description: 'Count of items per page . Default is 10.'
+                  example: 2
+                page:
+                  type: integer
+                  description: 'Page number . Default is 1.'
+                  example: 17
+      security: []
+  '/api/user-flow/calculate/{location_id}':
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                width:
+                  type: number
+                  description: 'Must be at least 1.'
+                  example: 0
+                height:
+                  type: number
+                  description: 'Must be at least 1.'
+                  example: 0
+                length:
+                  type: number
+                  description: 'Must be at least 2.'
+                  example: 0
+              required:
+                - width
+                - height
+                - length
+      security: []
+    parameters:
+      -
+        in: path
+        name: location_id
+        description: 'The ID of the location.'
+        example: architecto
+        required: true
+        schema:
+          type: string
 tags:
+  -
+    name: 'Api for blocks'
+    description: ''
+  -
+    name: 'Api for fridges'
+    description: ''
+  -
+    name: 'Api for locations'
+    description: ''
   -
     name: 'Api for roles'
     description: ''
   -
+    name: 'Api for rooms'
+    description: ''
+  -
     name: 'Api for users'
+    description: ''
+  -
+    name: Endpoints
     description: ''

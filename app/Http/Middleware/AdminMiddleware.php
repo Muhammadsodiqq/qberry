@@ -18,13 +18,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (Auth::user()->role->level != "1") {
-            return response()->json(
-                [
-                    "ok" => false,
-                    "error" => "forbidden"
-                ],
-                403
-            );
+            return response_error("Forbidden", 403);
         }
         return $next($request);
     }

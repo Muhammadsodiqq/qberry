@@ -1,12 +1,12 @@
-name: 'Api for roles'
+name: 'Api for blocks'
 description: ''
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/role/get
+      - POST
+    uri: api/block/create
     metadata:
-      title: 'Get all roles'
+      title: 'Create Block'
       description: ''
       authenticated: false
       custom: []
@@ -14,6 +14,72 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 1.75056
+        type: number
+        custom: []
+      width:
+        name: width
+        description: ''
+        required: true
+        example: 685951405.71889
+        type: number
+        custom: []
+      height:
+        name: height
+        description: ''
+        required: true
+        example: 4895.5229046
+        type: number
+        custom: []
+      length:
+        name: length
+        description: ''
+        required: true
+        example: 900427.75593
+        type: number
+        custom: []
+      room_id:
+        name: room_id
+        description: ''
+        required: true
+        example: 8
+        type: integer
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/block/getByRoomId/{room_id}'
+    metadata:
+      title: 'Get  blocks by room_id'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      room_id:
+        name: room_id
+        description: 'The ID of the room.'
+        required: true
+        example: et
+        type: string
+        custom: []
     queryParameters: []
     bodyParameters: []
     responses:

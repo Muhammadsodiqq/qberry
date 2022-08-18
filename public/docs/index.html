@@ -70,6 +70,45 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="api-for-blocks">
+                    <a href="#api-for-blocks">Api for blocks</a>
+                </li>
+                                    <ul id="tocify-subheader-api-for-blocks" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="api-for-blocks-POSTapi-block-create">
+                        <a href="#api-for-blocks-POSTapi-block-create">Create Block</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="api-for-blocks-GETapi-block-getByRoomId--room_id-">
+                        <a href="#api-for-blocks-GETapi-block-getByRoomId--room_id-">Get  blocks by room_id</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="api-for-fridges">
+                    <a href="#api-for-fridges">Api for fridges</a>
+                </li>
+                                    <ul id="tocify-subheader-api-for-fridges" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="api-for-fridges-POSTapi-fridge-create">
+                        <a href="#api-for-fridges-POSTapi-fridge-create">Create Fridge</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="api-for-fridges-GETapi-fridge-getByBlockId">
+                        <a href="#api-for-fridges-GETapi-fridge-getByBlockId">Get  fridges by block_id</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="api-for-locations">
+                    <a href="#api-for-locations">Api for locations</a>
+                </li>
+                                    <ul id="tocify-subheader-api-for-locations" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="api-for-locations-POSTapi-location-create">
+                        <a href="#api-for-locations-POSTapi-location-create">Create Location</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="api-for-locations-GETapi-location-get">
+                        <a href="#api-for-locations-GETapi-location-get">Get all locations</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-5" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="api-for-roles">
                     <a href="#api-for-roles">Api for roles</a>
                 </li>
@@ -79,7 +118,20 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-3" class="tocify-header">
+                    <ul id="tocify-header-6" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="api-for-rooms">
+                    <a href="#api-for-rooms">Api for rooms</a>
+                </li>
+                                    <ul id="tocify-subheader-api-for-rooms" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="api-for-rooms-POSTapi-room-create">
+                        <a href="#api-for-rooms-POSTapi-room-create">Create Room</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="api-for-rooms-GETapi-room-get">
+                        <a href="#api-for-rooms-GETapi-room-get">Get all rooms</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-7" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="api-for-users">
                     <a href="#api-for-users">Api for users</a>
                 </li>
@@ -95,6 +147,19 @@
                     </li>
                                                     </ul>
                             </ul>
+                    <ul id="tocify-header-8" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-user-flow-get">
+                        <a href="#endpoints-GETapi-user-flow-get">GET api/user-flow/get</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-user-flow-calculate--location_id-">
+                        <a href="#endpoints-POSTapi-user-flow-calculate--location_id-">POST api/user-flow/calculate/{location_id}</a>
+                    </li>
+                                                    </ul>
+                            </ul>
         
                         
             </div>
@@ -105,7 +170,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 17 2022</li>
+        <li>Last updated: August 18 2022</li>
     </ul>
 </div>
 
@@ -123,6 +188,692 @@ You can switch the language used with the tabs at the top right (or from the nav
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
+
+        <h1 id="api-for-blocks">Api for blocks</h1>
+
+    
+
+            <h2 id="api-for-blocks-POSTapi-block-create">Create Block</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-block-create">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/block/create" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy\",
+    \"price\": 1.75056,
+    \"width\": 685951405.7188922,
+    \"height\": 4895.5229046,
+    \"length\": 900427.75593,
+    \"room_id\": 8
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/block/create"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy",
+    "price": 1.75056,
+    "width": 685951405.7188922,
+    "height": 4895.5229046,
+    "length": 900427.75593,
+    "room_id": 8
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-block-create">
+</span>
+<span id="execution-results-POSTapi-block-create" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-block-create"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-block-create"></code></pre>
+</span>
+<span id="execution-error-POSTapi-block-create" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-block-create"></code></pre>
+</span>
+<form id="form-POSTapi-block-create" data-method="POST"
+      data-path="api/block/create"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-block-create', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-block-create"
+                    onclick="tryItOut('POSTapi-block-create');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-block-create"
+                    onclick="cancelTryOut('POSTapi-block-create');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-block-create" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/block/create</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-block-create"
+               value="xlalxehzrvqwxkvkfojbzducufypcuobaztvpwnspgiryjwqbjydticqwapbysqnoenfpxeajxltmmfcuyamycyftsyciovmrsvhuyshzdlicfzbvdifxdeponrnmxvqjycyqkxchjcojgcnzmdbvanksdsy"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>price</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="price"
+               data-endpoint="POSTapi-block-create"
+               value="1.75056"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>width</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="width"
+               data-endpoint="POSTapi-block-create"
+               value="685951405.71889"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>height</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="height"
+               data-endpoint="POSTapi-block-create"
+               value="4895.5229046"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>length</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="length"
+               data-endpoint="POSTapi-block-create"
+               value="900427.75593"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>room_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="room_id"
+               data-endpoint="POSTapi-block-create"
+               value="8"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+            <h2 id="api-for-blocks-GETapi-block-getByRoomId--room_id-">Get  blocks by room_id</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-block-getByRoomId--room_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/block/getByRoomId/et" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/block/getByRoomId/et"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-block-getByRoomId--room_id-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-block-getByRoomId--room_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-block-getByRoomId--room_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-block-getByRoomId--room_id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-block-getByRoomId--room_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-block-getByRoomId--room_id-"></code></pre>
+</span>
+<form id="form-GETapi-block-getByRoomId--room_id-" data-method="GET"
+      data-path="api/block/getByRoomId/{room_id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-block-getByRoomId--room_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-block-getByRoomId--room_id-"
+                    onclick="tryItOut('GETapi-block-getByRoomId--room_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-block-getByRoomId--room_id-"
+                    onclick="cancelTryOut('GETapi-block-getByRoomId--room_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-block-getByRoomId--room_id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/block/getByRoomId/{room_id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>room_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="room_id"
+               data-endpoint="GETapi-block-getByRoomId--room_id-"
+               value="et"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the room.</p>
+            </p>
+                    </form>
+
+        <h1 id="api-for-fridges">Api for fridges</h1>
+
+    
+
+            <h2 id="api-for-fridges-POSTapi-fridge-create">Create Fridge</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-fridge-create">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/fridge/create" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"rxamlo\",
+    \"block_id\": 2
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/fridge/create"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "rxamlo",
+    "block_id": 2
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-fridge-create">
+</span>
+<span id="execution-results-POSTapi-fridge-create" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-fridge-create"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-fridge-create"></code></pre>
+</span>
+<span id="execution-error-POSTapi-fridge-create" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-fridge-create"></code></pre>
+</span>
+<form id="form-POSTapi-fridge-create" data-method="POST"
+      data-path="api/fridge/create"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-fridge-create', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-fridge-create"
+                    onclick="tryItOut('POSTapi-fridge-create');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-fridge-create"
+                    onclick="cancelTryOut('POSTapi-fridge-create');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-fridge-create" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/fridge/create</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-fridge-create"
+               value="rxamlo"
+               data-component="body" hidden>
+    <br>
+<p>Name of the fridge. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>block_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="block_id"
+               data-endpoint="POSTapi-fridge-create"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>Block id of the fridge.</p>
+        </p>
+        </form>
+
+            <h2 id="api-for-fridges-GETapi-fridge-getByBlockId">Get  fridges by block_id</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-fridge-getByBlockId">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/fridge/getByBlockId" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/fridge/getByBlockId"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-fridge-getByBlockId">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-fridge-getByBlockId" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-fridge-getByBlockId"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-fridge-getByBlockId"></code></pre>
+</span>
+<span id="execution-error-GETapi-fridge-getByBlockId" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-fridge-getByBlockId"></code></pre>
+</span>
+<form id="form-GETapi-fridge-getByBlockId" data-method="GET"
+      data-path="api/fridge/getByBlockId"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-fridge-getByBlockId', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-fridge-getByBlockId"
+                    onclick="tryItOut('GETapi-fridge-getByBlockId');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-fridge-getByBlockId"
+                    onclick="cancelTryOut('GETapi-fridge-getByBlockId');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-fridge-getByBlockId" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/fridge/getByBlockId</code></b>
+        </p>
+                    </form>
+
+        <h1 id="api-for-locations">Api for locations</h1>
+
+    
+
+            <h2 id="api-for-locations-POSTapi-location-create">Create Location</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-location-create">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/location/create" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"country_name\": \"rkfzqassxxgggbafheuydoowxvdpmkwsqauylnxyofqziyrnhgqtutyakgrfqjlwgbccajuonyeanczbkydkxikksqwcjjotyihrlmxvzjoinotnqrcnnwacbpvvozdvfrjztlqvltdxtvxsuoqqsdkwaozkifnhiqvaucgscsifzolkgpjeuvsebsaqgbudpjtqhdneuxxy\",
+    \"city_name\": \"jwumzkchkspszhgrbqxxotwdakfvvpeqqqnhmmlyoasobplihfqklavareuvarcvleusihvbmxwhycmtbzjnoqlimpgyamntnfwfytfwktnmgzudfsnrjojtmztwzsnmrczmrftvenmweigkocwuowunvmmhiaxidfyvaerlpiamcyjueznnhzwkrcaseur\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/location/create"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "country_name": "rkfzqassxxgggbafheuydoowxvdpmkwsqauylnxyofqziyrnhgqtutyakgrfqjlwgbccajuonyeanczbkydkxikksqwcjjotyihrlmxvzjoinotnqrcnnwacbpvvozdvfrjztlqvltdxtvxsuoqqsdkwaozkifnhiqvaucgscsifzolkgpjeuvsebsaqgbudpjtqhdneuxxy",
+    "city_name": "jwumzkchkspszhgrbqxxotwdakfvvpeqqqnhmmlyoasobplihfqklavareuvarcvleusihvbmxwhycmtbzjnoqlimpgyamntnfwfytfwktnmgzudfsnrjojtmztwzsnmrczmrftvenmweigkocwuowunvmmhiaxidfyvaerlpiamcyjueznnhzwkrcaseur"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-location-create">
+</span>
+<span id="execution-results-POSTapi-location-create" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-location-create"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-location-create"></code></pre>
+</span>
+<span id="execution-error-POSTapi-location-create" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-location-create"></code></pre>
+</span>
+<form id="form-POSTapi-location-create" data-method="POST"
+      data-path="api/location/create"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-location-create', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-location-create"
+                    onclick="tryItOut('POSTapi-location-create');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-location-create"
+                    onclick="cancelTryOut('POSTapi-location-create');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-location-create" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/location/create</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>country_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="country_name"
+               data-endpoint="POSTapi-location-create"
+               value="rkfzqassxxgggbafheuydoowxvdpmkwsqauylnxyofqziyrnhgqtutyakgrfqjlwgbccajuonyeanczbkydkxikksqwcjjotyihrlmxvzjoinotnqrcnnwacbpvvozdvfrjztlqvltdxtvxsuoqqsdkwaozkifnhiqvaucgscsifzolkgpjeuvsebsaqgbudpjtqhdneuxxy"
+               data-component="body" hidden>
+    <br>
+<p>Country name. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>city_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="city_name"
+               data-endpoint="POSTapi-location-create"
+               value="jwumzkchkspszhgrbqxxotwdakfvvpeqqqnhmmlyoasobplihfqklavareuvarcvleusihvbmxwhycmtbzjnoqlimpgyamntnfwfytfwktnmgzudfsnrjojtmztwzsnmrczmrftvenmweigkocwuowunvmmhiaxidfyvaerlpiamcyjueznnhzwkrcaseur"
+               data-component="body" hidden>
+    <br>
+<p>City name. Must not be greater than 255 characters.</p>
+        </p>
+        </form>
+
+            <h2 id="api-for-locations-GETapi-location-get">Get all locations</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-location-get">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/location/get" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/location/get"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-location-get">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-location-get" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-location-get"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-location-get"></code></pre>
+</span>
+<span id="execution-error-GETapi-location-get" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-location-get"></code></pre>
+</span>
+<form id="form-GETapi-location-get" data-method="GET"
+      data-path="api/location/get"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-location-get', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-location-get"
+                    onclick="tryItOut('GETapi-location-get');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-location-get"
+                    onclick="cancelTryOut('GETapi-location-get');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-location-get" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/location/get</code></b>
+        </p>
+                    </form>
 
         <h1 id="api-for-roles">Api for roles</h1>
 
@@ -223,6 +974,259 @@ access-control-allow-origin: *
         </p>
                     </form>
 
+        <h1 id="api-for-rooms">Api for rooms</h1>
+
+    
+
+            <h2 id="api-for-rooms-POSTapi-room-create">Create Room</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-room-create">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/room/create" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"temperature\": \"3\",
+    \"location_id\": 1,
+    \"name\": \"dqhbtdqfxqpweqfoohgjyrvsbrigufreemgmuillqnbdkhxajlabiprjvqkoehayhsfborrfazuyoibhuvdsmynvoyxzrnrwjppzxntchjqsksgcqkamgzefjljxaknqmcruznwmraripwvomxqhcmzhglzhslsjyu\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/room/create"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "temperature": "3",
+    "location_id": 1,
+    "name": "dqhbtdqfxqpweqfoohgjyrvsbrigufreemgmuillqnbdkhxajlabiprjvqkoehayhsfborrfazuyoibhuvdsmynvoyxzrnrwjppzxntchjqsksgcqkamgzefjljxaknqmcruznwmraripwvomxqhcmzhglzhslsjyu"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-room-create">
+</span>
+<span id="execution-results-POSTapi-room-create" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-room-create"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-room-create"></code></pre>
+</span>
+<span id="execution-error-POSTapi-room-create" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-room-create"></code></pre>
+</span>
+<form id="form-POSTapi-room-create" data-method="POST"
+      data-path="api/room/create"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-room-create', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-room-create"
+                    onclick="tryItOut('POSTapi-room-create');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-room-create"
+                    onclick="cancelTryOut('POSTapi-room-create');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-room-create" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/room/create</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>temperature</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="temperature"
+               data-endpoint="POSTapi-room-create"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>Temperature of the room. Must be one of <code>4</code>, <code>3</code>, <code>2</code>, <code>1</code>, or <code>0</code>.</p>
+        </p>
+                <p>
+            <b><code>location_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="location_id"
+               data-endpoint="POSTapi-room-create"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Location id of the room.</p>
+        </p>
+                <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-room-create"
+               value="dqhbtdqfxqpweqfoohgjyrvsbrigufreemgmuillqnbdkhxajlabiprjvqkoehayhsfborrfazuyoibhuvdsmynvoyxzrnrwjppzxntchjqsksgcqkamgzefjljxaknqmcruznwmraripwvomxqhcmzhglzhslsjyu"
+               data-component="body" hidden>
+    <br>
+<p>Name of the room. Must not be greater than 255 characters.</p>
+        </p>
+        </form>
+
+            <h2 id="api-for-rooms-GETapi-room-get">Get all rooms</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-room-get">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/room/get" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"count\": 13,
+    \"page\": 20
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/room/get"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "count": 13,
+    "page": 20
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-room-get">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-room-get" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-room-get"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-room-get"></code></pre>
+</span>
+<span id="execution-error-GETapi-room-get" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-room-get"></code></pre>
+</span>
+<form id="form-GETapi-room-get" data-method="GET"
+      data-path="api/room/get"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-room-get', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-room-get"
+                    onclick="tryItOut('GETapi-room-get');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-room-get"
+                    onclick="cancelTryOut('GETapi-room-get');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-room-get" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/room/get</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>count</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="count"
+               data-endpoint="GETapi-room-get"
+               value="13"
+               data-component="body" hidden>
+    <br>
+<p>Count of items per page . Default is 10.</p>
+        </p>
+                <p>
+            <b><code>page</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="page"
+               data-endpoint="GETapi-room-get"
+               value="20"
+               data-component="body" hidden>
+    <br>
+<p>Page number . Default is 1.</p>
+        </p>
+        </form>
+
         <h1 id="api-for-users">Api for users</h1>
 
     
@@ -244,8 +1248,8 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"iqzc\",
-    \"password\": \"ps\"
+    \"email\": \"praervtuineqrtaberykbeinfuklnixt\",
+    \"password\": \"\"
 }"
 </code></pre></div>
 
@@ -261,8 +1265,8 @@ const headers = {
 };
 
 let body = {
-    "email": "iqzc",
-    "password": "ps"
+    "email": "praervtuineqrtaberykbeinfuklnixt",
+    "password": ""
 };
 
 fetch(url, {
@@ -320,7 +1324,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-login"
-               value="iqzc"
+               value="praervtuineqrtaberykbeinfuklnixt"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 40 characters.</p>
@@ -330,7 +1334,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-login"
-               value="ps"
+               value=""
                data-component="body" hidden>
     <br>
 <p>Must be at least 4 characters.</p>
@@ -354,9 +1358,9 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"fzwmlqejhynoxxktalvzwvge\",
-    \"email\": \"mmjivmudkfvkbcmkbamupqooxpfencuop\",
-    \"role_id\": 3
+    \"name\": \"fxanylxqvnsxfctkhiwnwcgqqlqmqaaujcsrdknkzfkslfccycgjlkiefqijvyarvjsnjyxuwjfgfsdqnoklvwervclumkbtcfdhrcypbsivphwnaeplzxnvexxadxopcadmpeemganwibvfeodwdtwhacnhcboowpxqlkygbaefqqimijoncvymbdiuhkvmntscgcdvmhvrpwkzfqykwvsctojyovpvkvnjxgggsemjnh\",
+    \"email\": \"swqdomhlmlkjbuogovbdqflxdlxjpxdykdio\",
+    \"role_id\": 19
 }"
 </code></pre></div>
 
@@ -372,9 +1376,9 @@ const headers = {
 };
 
 let body = {
-    "name": "fzwmlqejhynoxxktalvzwvge",
-    "email": "mmjivmudkfvkbcmkbamupqooxpfencuop",
-    "role_id": 3
+    "name": "fxanylxqvnsxfctkhiwnwcgqqlqmqaaujcsrdknkzfkslfccycgjlkiefqijvyarvjsnjyxuwjfgfsdqnoklvwervclumkbtcfdhrcypbsivphwnaeplzxnvexxadxopcadmpeemganwibvfeodwdtwhacnhcboowpxqlkygbaefqqimijoncvymbdiuhkvmntscgcdvmhvrpwkzfqykwvsctojyovpvkvnjxgggsemjnh",
+    "email": "swqdomhlmlkjbuogovbdqflxdlxjpxdykdio",
+    "role_id": 19
 };
 
 fetch(url, {
@@ -432,7 +1436,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-user-create"
-               value="fzwmlqejhynoxxktalvzwvge"
+               value="fxanylxqvnsxfctkhiwnwcgqqlqmqaaujcsrdknkzfkslfccycgjlkiefqijvyarvjsnjyxuwjfgfsdqnoklvwervclumkbtcfdhrcypbsivphwnaeplzxnvexxadxopcadmpeemganwibvfeodwdtwhacnhcboowpxqlkygbaefqqimijoncvymbdiuhkvmntscgcdvmhvrpwkzfqykwvsctojyovpvkvnjxgggsemjnh"
                data-component="body" hidden>
     <br>
 <p>The name of the user. Must not be greater than 255 characters.</p>
@@ -442,7 +1446,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-user-create"
-               value="mmjivmudkfvkbcmkbamupqooxpfencuop"
+               value="swqdomhlmlkjbuogovbdqflxdlxjpxdykdio"
                data-component="body" hidden>
     <br>
 <p>The email of the user. Must be a valid email address. Must not be greater than 40 characters.</p>
@@ -452,7 +1456,7 @@ fetch(url, {
                 <input type="number"
                name="role_id"
                data-endpoint="POSTapi-user-create"
-               value="3"
+               value="19"
                data-component="body" hidden>
     <br>
 <p>The role id of the user.</p>
@@ -476,7 +1480,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"password\": \"ut\"
+    \"password\": \"aut\"
 }"
 </code></pre></div>
 
@@ -492,7 +1496,7 @@ const headers = {
 };
 
 let body = {
-    "password": "ut"
+    "password": "aut"
 };
 
 fetch(url, {
@@ -550,10 +1554,274 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-user-update-own"
-               value="ut"
+               value="aut"
                data-component="body" hidden>
     <br>
 
+        </p>
+        </form>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+            <h2 id="endpoints-GETapi-user-flow-get">GET api/user-flow/get</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-user-flow-get">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/user-flow/get" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"count\": 2,
+    \"page\": 17
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user-flow/get"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "count": 2,
+    "page": 17
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user-flow-get">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user-flow-get" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user-flow-get"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user-flow-get"></code></pre>
+</span>
+<span id="execution-error-GETapi-user-flow-get" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user-flow-get"></code></pre>
+</span>
+<form id="form-GETapi-user-flow-get" data-method="GET"
+      data-path="api/user-flow/get"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-flow-get', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user-flow-get"
+                    onclick="tryItOut('GETapi-user-flow-get');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user-flow-get"
+                    onclick="cancelTryOut('GETapi-user-flow-get');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user-flow-get" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user-flow/get</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>count</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="count"
+               data-endpoint="GETapi-user-flow-get"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>Count of items per page . Default is 10.</p>
+        </p>
+                <p>
+            <b><code>page</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="page"
+               data-endpoint="GETapi-user-flow-get"
+               value="17"
+               data-component="body" hidden>
+    <br>
+<p>Page number . Default is 1.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-POSTapi-user-flow-calculate--location_id-">POST api/user-flow/calculate/{location_id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-user-flow-calculate--location_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/user-flow/calculate/architecto" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"width\": 0,
+    \"height\": 0,
+    \"length\": 0
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user-flow/calculate/architecto"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "width": 0,
+    "height": 0,
+    "length": 0
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-user-flow-calculate--location_id-">
+</span>
+<span id="execution-results-POSTapi-user-flow-calculate--location_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-user-flow-calculate--location_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-user-flow-calculate--location_id-"></code></pre>
+</span>
+<span id="execution-error-POSTapi-user-flow-calculate--location_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-user-flow-calculate--location_id-"></code></pre>
+</span>
+<form id="form-POSTapi-user-flow-calculate--location_id-" data-method="POST"
+      data-path="api/user-flow/calculate/{location_id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-user-flow-calculate--location_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-user-flow-calculate--location_id-"
+                    onclick="tryItOut('POSTapi-user-flow-calculate--location_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-user-flow-calculate--location_id-"
+                    onclick="cancelTryOut('POSTapi-user-flow-calculate--location_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-user-flow-calculate--location_id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/user-flow/calculate/{location_id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>location_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="location_id"
+               data-endpoint="POSTapi-user-flow-calculate--location_id-"
+               value="architecto"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the location.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>width</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="width"
+               data-endpoint="POSTapi-user-flow-calculate--location_id-"
+               value="0"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>height</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="height"
+               data-endpoint="POSTapi-user-flow-calculate--location_id-"
+               value="0"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>length</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+                <input type="number"
+               name="length"
+               data-endpoint="POSTapi-user-flow-calculate--location_id-"
+               value="0"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 2.</p>
         </p>
         </form>
 
