@@ -78,4 +78,17 @@ class UserController extends Controller
             "msg" => 'User updated successfully.',
         ]);
     }
+
+    /**
+     * get Auth user
+     */
+
+    public function getAuthUser()
+    {
+        $user = User::find(Auth::user()->id);
+        return response_success([
+            "ok" => true,
+            "data" => $user,
+        ]);
+    }
 }

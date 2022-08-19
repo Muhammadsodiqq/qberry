@@ -26,5 +26,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        Collection::macro('setAppends', function ($attributes) {
+            return $this->map(function ($item) use ($attributes) {
+                return $item->setAppends($attributes);
+            });
+        });
     }
 }

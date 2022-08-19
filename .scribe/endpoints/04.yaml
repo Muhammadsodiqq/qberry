@@ -20,21 +20,21 @@ endpoints:
         name: temperature
         description: 'Temperature of the room. Must be one of <code>4</code>, <code>3</code>, <code>2</code>, <code>1</code>, or <code>0</code>.'
         required: true
-        example: '1'
+        example: '4'
         type: number
         custom: []
       location_id:
         name: location_id
         description: 'Location id of the room.'
         required: true
-        example: 12
+        example: 8
         type: integer
         custom: []
       name:
         name: name
         description: 'Name of the room. Must not be greater than 255 characters.'
         required: true
-        example: xkjtzouzydaxldrherhvtpxdqfkjwgcfclkjwwfklhwlbtcdjvtrtslvnftsvxhmyfbmlf
+        example: esmbvocpqcaheonjkjgvzksitnhoonswgyhvxhntjpewgpjguxslufaftiiwobqfpoegtxlcxyjnxyizxqozieegvhsxadpjmkbrwwctukckasjlhgpsdhjxcvlgxtelqblcqardjvsjpimgnmwdjmilzyatidjyhdqzgilantromseiwjt
         type: string
         custom: []
     responses: []
@@ -58,14 +58,14 @@ endpoints:
         name: count
         description: 'Count of items per page . Default is 10.'
         required: false
-        example: 3
+        example: 4
         type: integer
         custom: []
       page:
         name: page
         description: 'Page number . Default is 1.'
         required: false
-        example: 5
+        example: 12
         type: integer
         custom: []
     responses:

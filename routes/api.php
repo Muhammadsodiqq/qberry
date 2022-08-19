@@ -31,37 +31,35 @@ Route::group(['middleware' => ['auth:api']], function () {
         Route::post('update-own', 'UpdateOwnInfo');
     });
 
+    Route::prefix('block')->controller(BlockController::class)->group(function () {
+        Route::post('create', 'create')->middleware(AdminMiddleware::class);
+        Route::get('get-by-room-id/{room_id}', 'getByRoomID');
+    });
 
-        Route::prefix('block')->controller(BlockController::class)->group(function () {
-            Route::post('create', 'create')->middleware(AdminMiddleware::class);
-            Route::get('get-by-room-id/{room_id}', 'getByRoomID');
-        });
+    Route::prefix('role')->controller(RoleController::class)->group(function () {
+        Route::get('get', 'get')->middleware(AdminMiddleware::class);
+    });
 
-        Route::prefix('role')->controller(RoleController::class)->group(function () {
-            Route::get('get', 'get')->middleware(AdminMiddleware::class);
-        });
+    Route::prefix('fridge')->controller(FridgeController::class)->group(function () {
+        Route::post('create', 'create')->middleware(AdminMiddleware::class);
+        Route::get('getByBlockId', 'getByBlockID');
+    });
 
-        Route::prefix('fridge')->controller(FridgeController::class)->group(function () {
-            Route::post('create', 'create')->middleware(AdminMiddleware::class);
-            Route::get('getByBlockId', 'getByBlockID');
-        });
+    Route::prefix('location')->controller(LocationController::class)->group(function () {
+        Route::post('create', 'create')->middleware(AdminMiddleware::class);
+        Route::get('get', 'getAll')->middleware(AdminMiddleware::class);
+    });
 
-        Route::prefix('location')->controller(LocationController::class)->group(function () {
-            Route::post('create', 'create')->middleware(AdminMiddleware::class);
-            Route::get('get', 'getAll')->middleware(AdminMiddleware::class);
-        });
+    Route::prefix('room')->controller(RoomController::class)->group(function () {
+        Route::post('create', 'create')->middleware(AdminMiddleware::class);
+        Route::get('get', 'getAll')->middleware(AdminMiddleware::class);
+    });
 
-        Route::prefix('room')->controller(RoomController::class)->group(function () {
-            Route::post('create', 'create')->middleware(AdminMiddleware::class);
-            Route::get('get', 'getAll')->middleware(AdminMiddleware::class);
-        });
-
-        Route::prefix('user-flow')->controller(UserFlowController::class)->group(function () {
-            Route::get('get', 'getLocationsWithRooms');
-            Route::post("calculate/{location_id}", "Calculate");
-            Route::post("booking", "Booking");
-            Route::get("get-own-bookings", "getOwnBookings");
-        });
+    Route::prefix('user-flow')->controller(UserFlowController::class)->group(function () {
+        Route::get('get', 'getLocationsWithRooms');
+        Route::post("calculate/{location_id}", "Calculate");
+        Route::post("book-booking", "BookBlocks");
+        Route::get("get-my-bookings", "getMyBookings");
+    });
 
 });
-

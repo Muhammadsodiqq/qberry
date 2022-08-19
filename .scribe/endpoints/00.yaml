@@ -20,42 +20,42 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: psgdkmadlukhwtuhdhcvnfyixkzblgvgizofmvqhshrdezddiawaqavrmvtdumynsngqfguppnkmloehsjkofdnrktgmgqyrohfkhutkzawilymcplcwgrhgvnhrwdfeenflzfjqslzbyznjapffky
+        example: fktirlcqbshxnnkaxjlgnixwzsyayoqtqgudwtfqccdhpdkwgzeyezvofcfdccbelzahcdvirwdeuirwhwuygjgkvfwwzblwaxcuwzgvgdlcwlbzolgrityhxbldancpdckqnvhngxgptespeqawhbznxymutthnfycsdwpdedhwmouhepzlhizuypjzldcwkemjqteyirpmrlzurbtvgbwlcoxadjigczaxlvhmj
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: 371.1254555
+        example: 177276.47
         type: number
         custom: []
       width:
         name: width
         description: ''
         required: true
-        example: 176253.2367858
+        example: 157867.614057
         type: number
         custom: []
       height:
         name: height
         description: ''
         required: true
-        example: 7781723.5
+        example: 2498363.7316253
         type: number
         custom: []
       length:
         name: length
         description: ''
         required: true
-        example: 25.578
+        example: 895018.5881
         type: number
         custom: []
       room_id:
         name: room_id
         description: ''
         required: true
-        example: 5
+        example: 3
         type: integer
         custom: []
     responses: []
@@ -77,7 +77,7 @@ endpoints:
         name: room_id
         description: 'The ID of the room.'
         required: true
-        example: consequuntur
+        example: sint
         type: string
         custom: []
     queryParameters: []

@@ -22,14 +22,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 40 characters.'
         required: true
-        example: glrhyfo
+        example: dzwcxkwvxiigwrupdrlvby
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 4 characters.'
         required: true
-        example: mb
+        example: bpqv
         type: string
         custom: []
     responses: []
@@ -53,21 +53,21 @@ endpoints:
         name: name
         description: 'The name of the user. Must not be greater than 255 characters.'
         required: true
-        example: vawcvzknciuejtbjwhxsxyucardaskbujoqhnphzqvteeeknfcmgjvnmxjjjrqdphbqeitqhwcctxqwodrfbgqcliwynrqzslkcgjjgt
+        example: zdehxepeuudmosuqhabppdjqghurugkfblnpwflmrqvakelmakdnzkitu
         type: string
         custom: []
       email:
         name: email
         description: 'The email of the user. Must be a valid email address. Must not be greater than 40 characters.'
         required: true
-        example: dknmixkklfigzacpsvupsniuxvichzdjuyjsqis
+        example: pjju
         type: string
         custom: []
       role_id:
         name: role_id
         description: 'The role id of the user.'
         required: true
-        example: 19
+        example: 9
         type: integer
         custom: []
     responses: []
@@ -91,7 +91,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: est
+        example: voluptatem
         type: string
         custom: []
     responses: []

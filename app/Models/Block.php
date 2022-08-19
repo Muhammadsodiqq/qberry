@@ -24,8 +24,22 @@ class Block extends Model
         return $this->belongsTo(Room::class);
     }
 
-    // public function getCurrentCostAttribute()
-    // {
+    public function fridges()
+    {
+        return $this->hasMany(Fridge::class);
+    }
 
-    // }
+    public function getCostAttribute()
+    {
+            $datetime1 = date_create($this->start_date_booking);
+            $datetime2 = date_create(date("Y-m-d"));
+
+            $interval = date_diff($datetime1, $datetime2);
+            $days = $interval->format('%a');
+            return [
+                "current_cost" => $this->price * $days,
+                "general_cost" => $this->price * $this->booking_day,
+                "how_many_days" => $days,
+            ];
+    }
 }

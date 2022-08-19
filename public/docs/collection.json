@@ -10,11 +10,186 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "98cafd33-139a-4470-97f9-fc9b52665d56",
+        "_postman_id": "4510a20d-2fc4-49b4-8885-41a5d12983f2",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Api's for users flow",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get all information about location, room",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-flow\/get",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-flow\/get"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"count\":4,\"page\":6}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "calculate area, sum of blocks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-flow\/calculate\/:location_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-flow\/calculate\/:location_id",
+                            "variable": [
+                                {
+                                    "id": "location_id",
+                                    "key": "location_id",
+                                    "value": "autem",
+                                    "description": "The ID of the location."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"width\":0,\"height\":0,\"length\":0,\"temperature\":1,\"to_date\":19}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Book blocks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-flow\/book-booking",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-flow\/book-booking"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"id\":[9],\"booking_days\":1}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get My bookings",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-flow\/get-my-bookings",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-flow\/get-my-bookings"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "Api for blocks",
             "description": "",
@@ -41,7 +216,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"psgdkmadlukhwtuhdhcvnfyixkzblgvgizofmvqhshrdezddiawaqavrmvtdumynsngqfguppnkmloehsjkofdnrktgmgqyrohfkhutkzawilymcplcwgrhgvnhrwdfeenflzfjqslzbyznjapffky\",\"price\":371.1254555,\"width\":176253.2367858,\"height\":7781723.5,\"length\":25.578,\"room_id\":5}"
+                            "raw": "{\"name\":\"fktirlcqbshxnnkaxjlgnixwzsyayoqtqgudwtfqccdhpdkwgzeyezvofcfdccbelzahcdvirwdeuirwhwuygjgkvfwwzblwaxcuwzgvgdlcwlbzolgrityhxbldancpdckqnvhngxgptespeqawhbznxymutthnfycsdwpdedhwmouhepzlhizuypjzldcwkemjqteyirpmrlzurbtvgbwlcoxadjigczaxlvhmj\",\"price\":177276.47,\"width\":157867.614057,\"height\":2498363.7316253,\"length\":895018.5881,\"room_id\":3}"
                         },
                         "description": "",
                         "auth": {
@@ -62,7 +237,7 @@
                                 {
                                     "id": "room_id",
                                     "key": "room_id",
-                                    "value": "consequuntur",
+                                    "value": "sint",
                                     "description": "The ID of the room."
                                 }
                             ]
@@ -134,7 +309,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"qucacksmtyysfouruvyhogyfujuihcdbjgivtcgjfsnar\",\"block_id\":13}"
+                            "raw": "{\"name\":\"wcznhcjioqpolkfxdmmpinrubuygetuazykpkewftrypmxpaufmsdadqtdaqakuuysfvcilbibeeprbldeqxezqspgowstflgsrqinuwbhvrkewqsuzjpzrkelcpytlrosrfxjdryholhvbgikjvqivhinxqdpcrssotldnnbxveinimbfjcyovgtgxivnvdmexkpwewtqeefsolzuejbsyikqvbnroejsmlnklunthyuail\",\"block_id\":8}"
                         },
                         "description": "",
                         "auth": {
@@ -219,7 +394,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"country_name\":\"zwypbawlwzhlikagievcjmqdegmdmfygqhyfiauekmtkfcpnuupvenmtvttldssyxlnjwvuowpgtqdobwloeqagqtdsqroyncemkunvkhhphqdebkdlilitzvtlnccypcjdspetwyxlhliwdpxduyficvcyhpunalvjdqtesq\",\"city_name\":\"fujcpufsygyvcgfitjqpmqancckwzjlunxcsqraavqfezxpfhwispgydmhghnmuupzvxixqvrionxmvhkixaekywxopjbsdplzoutkjquuqbautijwfrilytjorbhwyqinrtqxkmniwjlictdjwfeqzoodxhbbcisoajzedqrkvkrmcsyqniwcrnzhtcwykj\"}"
+                            "raw": "{\"country_name\":\"okkzndjlcdugjqnyfqmxvdtmsjjxdrupflizjmwihfoxsqxwzunzgxhbsocpmpblezqypbheqoxjwsenyesbgkutwkcfnbseoqbyqmdtmnfwyktsvntcbiptwuryfxczyveqonjksefyrmkugfwfltyekrzmnagho\",\"city_name\":\"msbeqrpndjsxoqxfvymwgbsojspqgmfkjbdrhpndbhwwtgiztbjbsvxvwdyeb\"}"
                         },
                         "description": "",
                         "auth": {
@@ -358,7 +533,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"temperature\":\"1\",\"location_id\":12,\"name\":\"xkjtzouzydaxldrherhvtpxdqfkjwgcfclkjwwfklhwlbtcdjvtrtslvnftsvxhmyfbmlf\"}"
+                            "raw": "{\"temperature\":\"4\",\"location_id\":8,\"name\":\"esmbvocpqcaheonjkjgvzksitnhoonswgyhvxhntjpewgpjguxslufaftiiwobqfpoegtxlcxyjnxyizxqozieegvhsxadpjmkbrwwctukckasjlhgpsdhjxcvlgxtelqblcqardjvsjpimgnmwdjmilzyatidjyhdqzgilantromseiwjt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -389,7 +564,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"count\":3,\"page\":5}"
+                            "raw": "{\"count\":4,\"page\":12}"
                         },
                         "description": "",
                         "auth": {
@@ -446,7 +621,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"glrhyfo\",\"password\":\"mb\"}"
+                            "raw": "{\"email\":\"dzwcxkwvxiigwrupdrlvby\",\"password\":\"bpqv\"}"
                         },
                         "description": "",
                         "auth": {
@@ -477,7 +652,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"vawcvzknciuejtbjwhxsxyucardaskbujoqhnphzqvteeeknfcmgjvnmxjjjrqdphbqeitqhwcctxqwodrfbgqcliwynrqzslkcgjjgt\",\"email\":\"dknmixkklfigzacpsvupsniuxvichzdjuyjsqis\",\"role_id\":19}"
+                            "raw": "{\"name\":\"zdehxepeuudmosuqhabppdjqghurugkfblnpwflmrqvakelmakdnzkitu\",\"email\":\"pjju\",\"role_id\":9}"
                         },
                         "description": "",
                         "auth": {
@@ -508,134 +683,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"est\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "api\/user-flow\/get",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/user-flow\/get",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/user-flow\/get"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"count\":1,\"page\":16}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/user-flow\/calculate\/{location_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/user-flow\/calculate\/:location_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/user-flow\/calculate\/:location_id",
-                            "variable": [
-                                {
-                                    "id": "location_id",
-                                    "key": "location_id",
-                                    "value": "et",
-                                    "description": "The ID of the location."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"width\":1,\"height\":0,\"length\":1}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/user-flow\/booking",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/user-flow\/booking",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/user-flow\/booking"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"id\":[4]}"
+                            "raw": "{\"password\":\"voluptatem\"}"
                         },
                         "description": "",
                         "auth": {

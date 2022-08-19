@@ -16,6 +16,7 @@ class BookingRequest extends FormRequest
         return [
             "id" => "required|array",
             "id.*" => "required|integer|exists:blocks,id",
+            "booking_days" => "required|integer|max:24",
         ];
     }
 
@@ -24,6 +25,9 @@ class BookingRequest extends FormRequest
         return [
             "id" =>[
                 "description" => "Array of block ids",
+            ],
+            "booking_days" => [
+                "description" => "Number of days of the booking",
             ],
         ];
     }
