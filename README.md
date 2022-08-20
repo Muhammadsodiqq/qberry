@@ -7,7 +7,7 @@
  3. configure database connect.
  4. run command first `composer install` then `php artisan migrate`  then `php artisan passport:install` then `php artisan db:seed` then `php artisan key:generate` then 
  5. to start using run this command  `php artisan serve`
- 6. the docs is in `http://127.0.0.1:8000/docs` and postman collection and documentation here `https://documenter.getpostman.com/view/18022377/VUqpsHBq`
+ 6. the docs is in [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs) and postman collection and documentation [here](https://documenter.getpostman.com/view/18022377/VUqpsHBq) 
  
 
 ## In calculate procces
