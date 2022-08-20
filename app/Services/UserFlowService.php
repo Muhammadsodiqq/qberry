@@ -71,7 +71,7 @@ class UserFlowService
         ]);
     }
 
-    public function getFreeBlocksByLocation(&$room): void
+    private function getFreeBlocksByLocation(&$room): void
     {
 
         $blocks = Block::where('room_id', $room['id'])->whereNull("user_id")->get()->toArray();
