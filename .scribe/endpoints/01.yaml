@@ -1,12 +1,12 @@
-name: 'Api for fridges'
+name: 'Api for blocks'
 description: ''
 endpoints:
   -
     httpMethods:
       - POST
-    uri: api/fridge/create
+    uri: api/block/create
     metadata:
-      title: 'Create Fridge'
+      title: 'Create Block'
       description: ''
       authenticated: false
       custom: []
@@ -18,16 +18,44 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: 'Name of the fridge. Must not be greater than 255 characters.'
+        description: 'Must not be greater than 255 characters.'
         required: true
-        example: wcznhcjioqpolkfxdmmpinrubuygetuazykpkewftrypmxpaufmsdadqtdaqakuuysfvcilbibeeprbldeqxezqspgowstflgsrqinuwbhvrkewqsuzjpzrkelcpytlrosrfxjdryholhvbgikjvqivhinxqdpcrssotldnnbxveinimbfjcyovgtgxivnvdmexkpwewtqeefsolzuejbsyikqvbnroejsmlnklunthyuail
+        example: nyljoxxsmreobzqewkkzdefttszpytsijphhrmabvdvcyhjedhqhhepzsxbmsnxwbzvsdedfmtosembkxavtidjjxzruhmobusoqyqfismkcrcautmaatyqrucragrjjsjogwqpfbslwdxgrtwkqkrefufiwvcbxhmvghqvbsotwrmubuqj
         type: string
         custom: []
-      block_id:
-        name: block_id
-        description: 'Block id of the fridge.'
+      price:
+        name: price
+        description: ''
         required: true
-        example: 8
+        example: 4666658.9527496
+        type: number
+        custom: []
+      width:
+        name: width
+        description: ''
+        required: true
+        example: 190759707.50582
+        type: number
+        custom: []
+      height:
+        name: height
+        description: ''
+        required: true
+        example: 1152869.0
+        type: number
+        custom: []
+      length:
+        name: length
+        description: ''
+        required: true
+        example: 495892.445
+        type: number
+        custom: []
+      room_id:
+        name: room_id
+        description: ''
+        required: true
+        example: 4
         type: integer
         custom: []
     responses: []
@@ -35,16 +63,23 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/fridge/getByBlockId
+    uri: 'api/block/get-by-room-id/{room_id}'
     metadata:
-      title: 'Get  fridges by block_id'
+      title: 'Get  blocks by room_id'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
+    urlParameters:
+      room_id:
+        name: room_id
+        description: 'The ID of the room.'
+        required: true
+        example: libero
+        type: string
+        custom: []
     queryParameters: []
     bodyParameters: []
     responses:

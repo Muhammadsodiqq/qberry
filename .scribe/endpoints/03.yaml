@@ -1,12 +1,43 @@
-name: 'Api for roles'
+name: 'Api for locations'
 description: ''
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/role/get
+      - POST
+    uri: api/location/create
     metadata:
-      title: 'Get all roles'
+      title: 'Create Location'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      country_name:
+        name: country_name
+        description: 'Country name. Must not be greater than 255 characters.'
+        required: true
+        example: hzzkyzkykyphmdfnsgiqyywqalohzhefnzjtutcxuwdjtckxbfzxazieugrjrpduerebtau
+        type: string
+        custom: []
+      city_name:
+        name: city_name
+        description: 'City name. Must not be greater than 255 characters.'
+        required: true
+        example: hdrayfakahxaprzmltqetgbbobsvhqtsavxvzfcarsricohffelhmtkrhkiwpx
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/location/get
+    metadata:
+      title: 'Get all locations'
       description: ''
       authenticated: false
       custom: []

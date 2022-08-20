@@ -51,11 +51,11 @@ paths:
                 count:
                   type: integer
                   description: 'Count of items per page . Default is 10.'
-                  example: 4
+                  example: 2
                 page:
                   type: integer
                   description: 'Page number . Default is 1.'
-                  example: 6
+                  example: 9
       security: []
   '/api/user-flow/calculate/{location_id}':
     post:
@@ -93,19 +93,19 @@ paths:
                 height:
                   type: number
                   description: 'height of the block. Must be at least 1.'
-                  example: 0
+                  example: 1
                 length:
                   type: number
                   description: 'length of the block. Must be at least 2.'
-                  example: 0
+                  example: 1
                 temperature:
                   type: number
                   description: 'temperature of the room. Must be at least 1.'
-                  example: 1
+                  example: 0
                 to_date:
                   type: integer
                   description: 'date of the end of the booking. Must not be greater than 24.'
-                  example: 19
+                  example: 13
               required:
                 - width
                 - height
@@ -118,7 +118,7 @@ paths:
         in: path
         name: location_id
         description: 'The ID of the location.'
-        example: autem
+        example: excepturi
         required: true
         schema:
           type: string
@@ -155,13 +155,13 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - 9
+                    - 2
                   items:
                     type: integer
                 booking_days:
                   type: integer
                   description: 'Number of days of the booking. Must not be greater than 24.'
-                  example: 1
+                  example: 12
               required:
                 - id
                 - booking_days
@@ -233,27 +233,27 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fktirlcqbshxnnkaxjlgnixwzsyayoqtqgudwtfqccdhpdkwgzeyezvofcfdccbelzahcdvirwdeuirwhwuygjgkvfwwzblwaxcuwzgvgdlcwlbzolgrityhxbldancpdckqnvhngxgptespeqawhbznxymutthnfycsdwpdedhwmouhepzlhizuypjzldcwkemjqteyirpmrlzurbtvgbwlcoxadjigczaxlvhmj
+                  example: nyljoxxsmreobzqewkkzdefttszpytsijphhrmabvdvcyhjedhqhhepzsxbmsnxwbzvsdedfmtosembkxavtidjjxzruhmobusoqyqfismkcrcautmaatyqrucragrjjsjogwqpfbslwdxgrtwkqkrefufiwvcbxhmvghqvbsotwrmubuqj
                 price:
                   type: number
                   description: ''
-                  example: 177276.47
+                  example: 4666658.9527496
                 width:
                   type: number
                   description: ''
-                  example: 157867.614057
+                  example: 190759707.50582
                 height:
                   type: number
                   description: ''
-                  example: 2498363.7316253
+                  example: 1152869.0
                 length:
                   type: number
                   description: ''
-                  example: 895018.5881
+                  example: 495892.445
                 room_id:
                   type: integer
                   description: ''
-                  example: 3
+                  example: 4
               required:
                 - name
                 - price
@@ -302,7 +302,7 @@ paths:
         in: path
         name: room_id
         description: 'The ID of the room.'
-        example: sint
+        example: libero
         required: true
         schema:
           type: string
@@ -338,16 +338,16 @@ paths:
                 name:
                   type: string
                   description: 'Name of the fridge. Must not be greater than 255 characters.'
-                  example: wcznhcjioqpolkfxdmmpinrubuygetuazykpkewftrypmxpaufmsdadqtdaqakuuysfvcilbibeeprbldeqxezqspgowstflgsrqinuwbhvrkewqsuzjpzrkelcpytlrosrfxjdryholhvbgikjvqivhinxqdpcrssotldnnbxveinimbfjcyovgtgxivnvdmexkpwewtqeefsolzuejbsyikqvbnroejsmlnklunthyuail
+                  example: llxjarcutikvuilytcgbfvvovvzjwtycmqxzdrrjgabwunvdaaaylhwaowmyecianwkafgijqxpfhxcuzclqfnhxvwnpntztgqvhgpalucrcsbwafkvhjpaybwohjflyvipxiuhjswcnng
                 block_id:
                   type: integer
                   description: 'Block id of the fridge.'
-                  example: 8
+                  example: 11
               required:
                 - name
                 - block_id
       security: []
-  /api/fridge/getByBlockId:
+  '/api/fridge/getByBlockId/{block_id}':
     get:
       summary: 'Get  fridges by block_id'
       description: ''
@@ -382,6 +382,15 @@ paths:
       tags:
         - 'Api for fridges'
       security: []
+    parameters:
+      -
+        in: path
+        name: block_id
+        description: 'The ID of the block.'
+        example: inventore
+        required: true
+        schema:
+          type: string
   /api/location/create:
     post:
       summary: 'Create Location'
@@ -414,11 +423,11 @@ paths:
                 country_name:
                   type: string
                   description: 'Country name. Must not be greater than 255 characters.'
-                  example: okkzndjlcdugjqnyfqmxvdtmsjjxdrupflizjmwihfoxsqxwzunzgxhbsocpmpblezqypbheqoxjwsenyesbgkutwkcfnbseoqbyqmdtmnfwyktsvntcbiptwuryfxczyveqonjksefyrmkugfwfltyekrzmnagho
+                  example: hzzkyzkykyphmdfnsgiqyywqalohzhefnzjtutcxuwdjtckxbfzxazieugrjrpduerebtau
                 city_name:
                   type: string
                   description: 'City name. Must not be greater than 255 characters.'
-                  example: msbeqrpndjsxoqxfvymwgbsojspqgmfkjbdrhpndbhwwtgiztbjbsvxvwdyeb
+                  example: hdrayfakahxaprzmltqetgbbobsvhqtsavxvzfcarsricohffelhmtkrhkiwpx
               required:
                 - country_name
                 - city_name
@@ -525,15 +534,15 @@ paths:
                 temperature:
                   type: number
                   description: 'Temperature of the room. Must be one of <code>4</code>, <code>3</code>, <code>2</code>, <code>1</code>, or <code>0</code>.'
-                  example: '4'
+                  example: '2'
                 location_id:
                   type: integer
                   description: 'Location id of the room.'
-                  example: 8
+                  example: 18
                 name:
                   type: string
                   description: 'Name of the room. Must not be greater than 255 characters.'
-                  example: esmbvocpqcaheonjkjgvzksitnhoonswgyhvxhntjpewgpjguxslufaftiiwobqfpoegtxlcxyjnxyizxqozieegvhsxadpjmkbrwwctukckasjlhgpsdhjxcvlgxtelqblcqardjvsjpimgnmwdjmilzyatidjyhdqzgilantromseiwjt
+                  example: scbfcvyxvdcagtbynwjlwmhimimdjugdmrckjsinrmleqkengdmctzxjrzlehvrybxqcokmlzvyelsqzmxyyzvnmdxuzffvsiknxmmnfbig
               required:
                 - temperature
                 - location_id
@@ -583,11 +592,11 @@ paths:
                 count:
                   type: integer
                   description: 'Count of items per page . Default is 10.'
-                  example: 4
+                  example: 8
                 page:
                   type: integer
                   description: 'Page number . Default is 1.'
-                  example: 12
+                  example: 11
       security: []
   /api/login:
     post:
@@ -621,11 +630,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 40 characters.'
-                  example: dzwcxkwvxiigwrupdrlvby
+                  example: gaweikr
                 password:
                   type: string
                   description: 'Must be at least 4 characters.'
-                  example: bpqv
+                  example: ''
               required:
                 - email
                 - password
@@ -662,15 +671,15 @@ paths:
                 name:
                   type: string
                   description: 'The name of the user. Must not be greater than 255 characters.'
-                  example: zdehxepeuudmosuqhabppdjqghurugkfblnpwflmrqvakelmakdnzkitu
+                  example: fwrdvxudfokpmdbamdmpjguaxwnfylkjixahlshwwzvzbcrknrrlfwdkqopmtulhldgupysnuheycjhtkvmyscozhhateltvnjhbjwtxjvunftqidkizjwrxgjuraqpkopeqkoyjaozonftbleehesasrcbtdugeembchudqpizsapwnvkvnxsfcpevyvdjyouolxhjtgo
                 email:
                   type: string
                   description: 'The email of the user. Must be a valid email address. Must not be greater than 40 characters.'
-                  example: pjju
+                  example: rxrjy
                 role_id:
                   type: integer
                   description: 'The role id of the user.'
-                  example: 9
+                  example: 20
               required:
                 - name
                 - email
@@ -708,9 +717,44 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: mollitia
               required:
                 - password
+      security: []
+  /api/user/get/auth:
+    get:
+      summary: 'get Auth user'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Api for users'
       security: []
 tags:
   -

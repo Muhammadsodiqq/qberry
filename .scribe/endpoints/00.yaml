@@ -1,12 +1,12 @@
-name: 'Api for blocks'
+name: "Api's for users flow"
 description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/block/create
+      - GET
+    uri: api/user-flow/get
     metadata:
-      title: 'Create Block'
+      title: 'Get all information about location, room'
       description: ''
       authenticated: false
       custom: []
@@ -16,56 +16,36 @@ endpoints:
     urlParameters: []
     queryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: fktirlcqbshxnnkaxjlgnixwzsyayoqtqgudwtfqccdhpdkwgzeyezvofcfdccbelzahcdvirwdeuirwhwuygjgkvfwwzblwaxcuwzgvgdlcwlbzolgrityhxbldancpdckqnvhngxgptespeqawhbznxymutthnfycsdwpdedhwmouhepzlhizuypjzldcwkemjqteyirpmrlzurbtvgbwlcoxadjigczaxlvhmj
-        type: string
-        custom: []
-      price:
-        name: price
-        description: ''
-        required: true
-        example: 177276.47
-        type: number
-        custom: []
-      width:
-        name: width
-        description: ''
-        required: true
-        example: 157867.614057
-        type: number
-        custom: []
-      height:
-        name: height
-        description: ''
-        required: true
-        example: 2498363.7316253
-        type: number
-        custom: []
-      length:
-        name: length
-        description: ''
-        required: true
-        example: 895018.5881
-        type: number
-        custom: []
-      room_id:
-        name: room_id
-        description: ''
-        required: true
-        example: 3
+      count:
+        name: count
+        description: 'Count of items per page . Default is 10.'
+        required: false
+        example: 2
         type: integer
         custom: []
-    responses: []
+      page:
+        name: page
+        description: 'Page number . Default is 1.'
+        required: false
+        example: 9
+        type: integer
+        custom: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
     responseFields: []
   -
     httpMethods:
-      - GET
-    uri: 'api/block/get-by-room-id/{room_id}'
+      - POST
+    uri: 'api/user-flow/calculate/{location_id}'
     metadata:
-      title: 'Get  blocks by room_id'
+      title: 'calculate area, sum of blocks'
       description: ''
       authenticated: false
       custom: []
@@ -73,13 +53,97 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      room_id:
-        name: room_id
-        description: 'The ID of the room.'
+      location_id:
+        name: location_id
+        description: 'The ID of the location.'
         required: true
-        example: sint
+        example: excepturi
         type: string
         custom: []
+    queryParameters: []
+    bodyParameters:
+      width:
+        name: width
+        description: 'width of the block. Must be at least 1.'
+        required: true
+        example: 0
+        type: number
+        custom: []
+      height:
+        name: height
+        description: 'height of the block. Must be at least 1.'
+        required: true
+        example: 1
+        type: number
+        custom: []
+      length:
+        name: length
+        description: 'length of the block. Must be at least 2.'
+        required: true
+        example: 1
+        type: number
+        custom: []
+      temperature:
+        name: temperature
+        description: 'temperature of the room. Must be at least 1.'
+        required: true
+        example: 0
+        type: number
+        custom: []
+      to_date:
+        name: to_date
+        description: 'date of the end of the booking. Must not be greater than 24.'
+        required: true
+        example: 13
+        type: integer
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user-flow/book-booking
+    metadata:
+      title: 'Book blocks'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example:
+          - 2
+        type: 'integer[]'
+        custom: []
+      booking_days:
+        name: booking_days
+        description: 'Number of days of the booking. Must not be greater than 24.'
+        required: true
+        example: 12
+        type: integer
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user-flow/get-my-bookings
+    metadata:
+      title: 'Get My bookings'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
     queryParameters: []
     bodyParameters: []
     responses:

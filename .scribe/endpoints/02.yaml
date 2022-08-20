@@ -1,12 +1,12 @@
-name: 'Api for locations'
+name: 'Api for fridges'
 description: ''
 endpoints:
   -
     httpMethods:
       - POST
-    uri: api/location/create
+    uri: api/fridge/create
     metadata:
-      title: 'Create Location'
+      title: 'Create Fridge'
       description: ''
       authenticated: false
       custom: []
@@ -16,35 +16,42 @@ endpoints:
     urlParameters: []
     queryParameters: []
     bodyParameters:
-      country_name:
-        name: country_name
-        description: 'Country name. Must not be greater than 255 characters.'
+      name:
+        name: name
+        description: 'Name of the fridge. Must not be greater than 255 characters.'
         required: true
-        example: okkzndjlcdugjqnyfqmxvdtmsjjxdrupflizjmwihfoxsqxwzunzgxhbsocpmpblezqypbheqoxjwsenyesbgkutwkcfnbseoqbyqmdtmnfwyktsvntcbiptwuryfxczyveqonjksefyrmkugfwfltyekrzmnagho
+        example: llxjarcutikvuilytcgbfvvovvzjwtycmqxzdrrjgabwunvdaaaylhwaowmyecianwkafgijqxpfhxcuzclqfnhxvwnpntztgqvhgpalucrcsbwafkvhjpaybwohjflyvipxiuhjswcnng
         type: string
         custom: []
-      city_name:
-        name: city_name
-        description: 'City name. Must not be greater than 255 characters.'
+      block_id:
+        name: block_id
+        description: 'Block id of the fridge.'
         required: true
-        example: msbeqrpndjsxoqxfvymwgbsojspqgmfkjbdrhpndbhwwtgiztbjbsvxvwdyeb
-        type: string
+        example: 11
+        type: integer
         custom: []
     responses: []
     responseFields: []
   -
     httpMethods:
       - GET
-    uri: api/location/get
+    uri: 'api/fridge/getByBlockId/{block_id}'
     metadata:
-      title: 'Get all locations'
+      title: 'Get  fridges by block_id'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
+    urlParameters:
+      block_id:
+        name: block_id
+        description: 'The ID of the block.'
+        required: true
+        example: inventore
+        type: string
+        custom: []
     queryParameters: []
     bodyParameters: []
     responses:

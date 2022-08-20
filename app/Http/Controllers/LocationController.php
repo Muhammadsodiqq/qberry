@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LocationCreate;
 use App\Http\Requests\Pagination;
 use App\Models\Location;
+use App\Services\LocationService;
 use Illuminate\Http\Request;
 
 /**
@@ -12,20 +13,19 @@ use Illuminate\Http\Request;
  */
 class LocationController extends Controller
 {
+
+    public LocationService $service;
+
+    public function __construct()
+    {
+        $this->service = new LocationService();
+    }
     /**
      * Create Location
      */
     public function create(LocationCreate $request)
     {
-        $data = Location::create([
-            "country_name" => $request->country_name,
-            "city_name" => $request->city_name,
-        ]);
-
-        return response_success([
-            "ok" => true,
-            "data" => $data,
-        ]);
+        return $this->service->create($request);
     }
 
     /**
@@ -33,12 +33,7 @@ class LocationController extends Controller
      */
     public function getAll()
     {
-        $data = Location::get();
-
-        return response_success([
-            "ok" => true,
-            "data" => $data,
-        ]);
+        return $this->service->getAll();
     }
 
 }

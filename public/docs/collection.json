@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "4510a20d-2fc4-49b4-8885-41a5d12983f2",
+        "_postman_id": "691f8d90-5023-4280-8030-71897d173fee",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"count\":4,\"page\":6}"
+                            "raw": "{\"count\":2,\"page\":9}"
                         },
                         "description": "",
                         "auth": {
@@ -82,7 +82,7 @@
                                 {
                                     "id": "location_id",
                                     "key": "location_id",
-                                    "value": "autem",
+                                    "value": "excepturi",
                                     "description": "The ID of the location."
                                 }
                             ]
@@ -100,7 +100,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"width\":0,\"height\":0,\"length\":0,\"temperature\":1,\"to_date\":19}"
+                            "raw": "{\"width\":0,\"height\":1,\"length\":1,\"temperature\":0,\"to_date\":13}"
                         },
                         "description": "",
                         "auth": {
@@ -131,7 +131,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"id\":[9],\"booking_days\":1}"
+                            "raw": "{\"id\":[2],\"booking_days\":12}"
                         },
                         "description": "",
                         "auth": {
@@ -216,7 +216,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fktirlcqbshxnnkaxjlgnixwzsyayoqtqgudwtfqccdhpdkwgzeyezvofcfdccbelzahcdvirwdeuirwhwuygjgkvfwwzblwaxcuwzgvgdlcwlbzolgrityhxbldancpdckqnvhngxgptespeqawhbznxymutthnfycsdwpdedhwmouhepzlhizuypjzldcwkemjqteyirpmrlzurbtvgbwlcoxadjigczaxlvhmj\",\"price\":177276.47,\"width\":157867.614057,\"height\":2498363.7316253,\"length\":895018.5881,\"room_id\":3}"
+                            "raw": "{\"name\":\"nyljoxxsmreobzqewkkzdefttszpytsijphhrmabvdvcyhjedhqhhepzsxbmsnxwbzvsdedfmtosembkxavtidjjxzruhmobusoqyqfismkcrcautmaatyqrucragrjjsjogwqpfbslwdxgrtwkqkrefufiwvcbxhmvghqvbsotwrmubuqj\",\"price\":4666658.9527496,\"width\":190759707.50582,\"height\":1152869,\"length\":495892.445,\"room_id\":4}"
                         },
                         "description": "",
                         "auth": {
@@ -237,7 +237,7 @@
                                 {
                                     "id": "room_id",
                                     "key": "room_id",
-                                    "value": "sint",
+                                    "value": "libero",
                                     "description": "The ID of the room."
                                 }
                             ]
@@ -309,7 +309,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"wcznhcjioqpolkfxdmmpinrubuygetuazykpkewftrypmxpaufmsdadqtdaqakuuysfvcilbibeeprbldeqxezqspgowstflgsrqinuwbhvrkewqsuzjpzrkelcpytlrosrfxjdryholhvbgikjvqivhinxqdpcrssotldnnbxveinimbfjcyovgtgxivnvdmexkpwewtqeefsolzuejbsyikqvbnroejsmlnklunthyuail\",\"block_id\":8}"
+                            "raw": "{\"name\":\"llxjarcutikvuilytcgbfvvovvzjwtycmqxzdrrjgabwunvdaaaylhwaowmyecianwkafgijqxpfhxcuzclqfnhxvwnpntztgqvhgpalucrcsbwafkvhjpaybwohjflyvipxiuhjswcnng\",\"block_id\":11}"
                         },
                         "description": "",
                         "auth": {
@@ -323,9 +323,17 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/fridge\/getByBlockId",
+                            "path": "api\/fridge\/getByBlockId\/:block_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/fridge\/getByBlockId"
+                            "raw": "{{baseUrl}}\/api\/fridge\/getByBlockId\/:block_id",
+                            "variable": [
+                                {
+                                    "id": "block_id",
+                                    "key": "block_id",
+                                    "value": "inventore",
+                                    "description": "The ID of the block."
+                                }
+                            ]
                         },
                         "method": "GET",
                         "header": [
@@ -394,7 +402,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"country_name\":\"okkzndjlcdugjqnyfqmxvdtmsjjxdrupflizjmwihfoxsqxwzunzgxhbsocpmpblezqypbheqoxjwsenyesbgkutwkcfnbseoqbyqmdtmnfwyktsvntcbiptwuryfxczyveqonjksefyrmkugfwfltyekrzmnagho\",\"city_name\":\"msbeqrpndjsxoqxfvymwgbsojspqgmfkjbdrhpndbhwwtgiztbjbsvxvwdyeb\"}"
+                            "raw": "{\"country_name\":\"hzzkyzkykyphmdfnsgiqyywqalohzhefnzjtutcxuwdjtckxbfzxazieugrjrpduerebtau\",\"city_name\":\"hdrayfakahxaprzmltqetgbbobsvhqtsavxvzfcarsricohffelhmtkrhkiwpx\"}"
                         },
                         "description": "",
                         "auth": {
@@ -533,7 +541,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"temperature\":\"4\",\"location_id\":8,\"name\":\"esmbvocpqcaheonjkjgvzksitnhoonswgyhvxhntjpewgpjguxslufaftiiwobqfpoegtxlcxyjnxyizxqozieegvhsxadpjmkbrwwctukckasjlhgpsdhjxcvlgxtelqblcqardjvsjpimgnmwdjmilzyatidjyhdqzgilantromseiwjt\"}"
+                            "raw": "{\"temperature\":\"2\",\"location_id\":18,\"name\":\"scbfcvyxvdcagtbynwjlwmhimimdjugdmrckjsinrmleqkengdmctzxjrzlehvrybxqcokmlzvyelsqzmxyyzvnmdxuzffvsiknxmmnfbig\"}"
                         },
                         "description": "",
                         "auth": {
@@ -564,7 +572,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"count\":4,\"page\":12}"
+                            "raw": "{\"count\":8,\"page\":11}"
                         },
                         "description": "",
                         "auth": {
@@ -621,7 +629,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"dzwcxkwvxiigwrupdrlvby\",\"password\":\"bpqv\"}"
+                            "raw": "{\"email\":\"gaweikr\",\"password\":\"\"}"
                         },
                         "description": "",
                         "auth": {
@@ -652,7 +660,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"zdehxepeuudmosuqhabppdjqghurugkfblnpwflmrqvakelmakdnzkitu\",\"email\":\"pjju\",\"role_id\":9}"
+                            "raw": "{\"name\":\"fwrdvxudfokpmdbamdmpjguaxwnfylkjixahlshwwzvzbcrknrrlfwdkqopmtulhldgupysnuheycjhtkvmyscozhhateltvnjhbjwtxjvunftqidkizjwrxgjuraqpkopeqkoyjaozonftbleehesasrcbtdugeembchudqpizsapwnvkvnxsfcpevyvdjyouolxhjtgo\",\"email\":\"rxrjy\",\"role_id\":20}"
                         },
                         "description": "",
                         "auth": {
@@ -683,7 +691,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"voluptatem\"}"
+                            "raw": "{\"password\":\"mollitia\"}"
                         },
                         "description": "",
                         "auth": {
@@ -691,6 +699,54 @@
                         }
                     },
                     "response": []
+                },
+                {
+                    "name": "get Auth user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/get\/auth",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/get\/auth"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         }

@@ -1,50 +1,12 @@
-name: 'Api for rooms'
+name: 'Api for roles'
 description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/room/create
-    metadata:
-      title: 'Create Room'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      temperature:
-        name: temperature
-        description: 'Temperature of the room. Must be one of <code>4</code>, <code>3</code>, <code>2</code>, <code>1</code>, or <code>0</code>.'
-        required: true
-        example: '4'
-        type: number
-        custom: []
-      location_id:
-        name: location_id
-        description: 'Location id of the room.'
-        required: true
-        example: 8
-        type: integer
-        custom: []
-      name:
-        name: name
-        description: 'Name of the room. Must not be greater than 255 characters.'
-        required: true
-        example: esmbvocpqcaheonjkjgvzksitnhoonswgyhvxhntjpewgpjguxslufaftiiwobqfpoegtxlcxyjnxyizxqozieegvhsxadpjmkbrwwctukckasjlhgpsdhjxcvlgxtelqblcqardjvsjpimgnmwdjmilzyatidjyhdqzgilantromseiwjt
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
       - GET
-    uri: api/room/get
+    uri: api/role/get
     metadata:
-      title: 'Get all rooms'
+      title: 'Get all roles'
       description: ''
       authenticated: false
       custom: []
@@ -53,21 +15,7 @@ endpoints:
       Accept: application/json
     urlParameters: []
     queryParameters: []
-    bodyParameters:
-      count:
-        name: count
-        description: 'Count of items per page . Default is 10.'
-        required: false
-        example: 4
-        type: integer
-        custom: []
-      page:
-        name: page
-        description: 'Page number . Default is 1.'
-        required: false
-        example: 12
-        type: integer
-        custom: []
+    bodyParameters: []
     responses:
       -
         status: 401

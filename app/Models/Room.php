@@ -26,8 +26,4 @@ class Room extends Model
     }
 
 
-    // public function getCalculateAttribute()
-    // {
-    //     $data = $this->blocks()->get();
-    // }
 }

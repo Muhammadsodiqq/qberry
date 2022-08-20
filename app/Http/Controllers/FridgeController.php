@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Fridge;
 use Illuminate\Http\Request;
+use App\Services\FridgeService;
 use App\Http\Requests\FridgeCreate;
 
 /**
@@ -11,20 +12,20 @@ use App\Http\Requests\FridgeCreate;
  */
 class FridgeController extends Controller
 {
+
+    public FridgeService $service;
+
+    public function __construct()
+    {
+        $this->service = new FridgeService();
+    }
+
     /**
      * Create Fridge
      */
     public function create(FridgeCreate $request)
     {
-        $data = Fridge::create([
-            "name" => $request->name,
-            "block_id" => $request->block_id,
-        ]);
-
-        return response_success([
-            "ok" => true,
-            "data" => $data,
-        ]);
+        return $this->service->create($request);
     }
 
     /**
@@ -32,11 +33,6 @@ class FridgeController extends Controller
      */
     public function getByBlockID($block_id)
     {
-        $data = Fridge::where('block_id', $block_id)->get();
-
-        return response_success([
-            "ok" => true,
-            "data" => $data,
-        ]);
+        return $this->service->getByBlockID($block_id);
     }
 }

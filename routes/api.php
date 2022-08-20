@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::prefix('user')->controller(UserController::class)->group(function () {
         Route::post('create', 'createUser')->middleware(AdminMiddleware::class);
         Route::post('update-own', 'UpdateOwnInfo');
+        Route::get('get/auth', 'getAuthUser');
     });
 
     Route::prefix('block')->controller(BlockController::class)->group(function () {
@@ -42,7 +43,7 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     Route::prefix('fridge')->controller(FridgeController::class)->group(function () {
         Route::post('create', 'create')->middleware(AdminMiddleware::class);
-        Route::get('getByBlockId', 'getByBlockID');
+        Route::get('getByBlockId/{block_id}', 'getByBlockID');
     });
 
     Route::prefix('location')->controller(LocationController::class)->group(function () {
