@@ -36,6 +36,7 @@ class Block extends Model
 
             $interval = date_diff($datetime1, $datetime2);
             $days = $interval->format('%a');
+            $days = $days == 0 ? 1 : $days;
             return [
                 "current_cost" => $this->price * $days == 0 ? 1 : $this->price ,
                 "general_cost" => $this->price * $this->booking_day,
