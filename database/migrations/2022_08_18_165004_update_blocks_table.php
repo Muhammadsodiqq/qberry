@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('blocks', function (Blueprint $table) {
-            $table->date('start_date_booking')->nullable();
+            $table->date('start_date_booking')->nullable()->comment('дата начала бронирования');
         });
     }
 

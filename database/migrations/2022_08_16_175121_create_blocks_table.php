@@ -16,12 +16,12 @@ return new class extends Migration
     {
         Schema::create('blocks', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Room::class);
-            $table->string('name');
-            $table->decimal('price');
-            $table->decimal('width');
-            $table->decimal('height');
-            $table->decimal('length');
+            $table->foreignIdFor(Room::class)->comment('комната которой принадлежит блок');
+            $table->string('name')->comment('название блока');
+            $table->decimal('price')->comment('цена блока за день');
+            $table->decimal('width')->comment('ширина блока');
+            $table->decimal('height')->comment('высота блока');
+            $table->decimal('length')->comment('длина блока');
             $table->timestamps();
         });
     }

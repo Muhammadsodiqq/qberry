@@ -19,7 +19,7 @@ return new class extends Migration
         });
 
         Schema::table('blocks', function (Blueprint $table) {
-            $table->foreignIdFor(User::class)->nullable();
+            $table->foreignIdFor(User::class)->nullable()->comment('пользователь который забронировал блок');
         });
     }
 
